@@ -1,0 +1,8 @@
+.sectionTwo {
+    display: grid;
+    place-items: center;
+    margin: 100px;
+}
+.digitalSecurity span {
+    color: #07D600 ;
+}
