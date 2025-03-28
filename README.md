@@ -73,7 +73,8 @@ uvicorn main:app --reload
 - **Planeación:**
 Antes de hacer una contribución haga el ejercicio de plantear y formular de manera adecuada el cambio que va a realizar (actualizar, añadir o eliminar).
 
--- **Edición:**
+- **Edición:**
+Debe tener en cuenta que por motivos de optimización y mantenimientó del software la edición del codigo para actualizar, añadir o eliminar debe realizarce de manera puntual afectando la menor cantidad de modulos y archivos (se solicita una solucion espe)
 **Reglas:**
 - **1. Sintaxis:**
    
