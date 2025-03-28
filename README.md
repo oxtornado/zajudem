@@ -1,4 +1,4 @@
-i# Senasec
+## Senasec
 
 Senasec es un servicio de software desarrollado por la empresa Zajudem. Este sistema integra reconocimiento facial con inteligencia artificial para permitir el acceso del profesorado a las instalaciones educativas. Además, proporciona una plataforma para visualizar las aulas disponibles y los horarios de clase junto con sus respectivos cursos.
 
@@ -68,9 +68,15 @@ uvicorn main:app --reload
 - **Uso de hardware (Arduino)** para una demostración práctica de acceso seguro.
 - **Estructura modular** que permite escalabilidad y fácil mantenimiento del software.
 
-## Contribución
-## Reglas:
-## 1. Sintaxis 
+## Contribución 
+- **Etapas de la contribución:**
+- **Planeación:**
+Antes de hacer una contribución haga el ejercicio de plantear y formular de manera adecuada el cambio que va a realizar (actualizar, añadir o eliminar).
+
+-- **Edición:**
+**Reglas:**
+- **1. Sintaxis:**
+   
 
 Las contribuciones son bienvenidas. Por favor, abre un issue o envía un pull request con mejoras y correcciones.
 
