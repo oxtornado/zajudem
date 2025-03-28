@@ -75,5 +75,5 @@ Las contribuciones son bienvenidas. Por favor, abre un issue o envía un pull re
 Este proyecto está bajo la licencia MIT.
 
 ---
-Para más información, contacta a Zajudem en [correo@example.com](mailto:dnielussa@gmail.com) o revisa la [documentación oficial del proyecto](#).
+Para más información, contacta a [Zajudem](mailto:dnielussa@gmail.com) o revisa la [documentación oficial del proyecto](#).
 
