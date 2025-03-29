@@ -93,7 +93,7 @@ actualización: mejora en la logica de inicio de sesión
 ```
 - **Descripción:**
 ```
-La logica del inicio de sesión no sera vulnerable a inyecciones SQL debido a la importacion de la libreria *"nombre de la libreria"*
+La logica del inicio de sesión no sera vulnerable a inyecciones SQL debido a la importacion de la libreria "nombre de la libreria"
 ```
 
 - **Nota:**
