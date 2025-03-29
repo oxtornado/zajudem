@@ -70,16 +70,34 @@ uvicorn main:app --reload
 
 ## Contribución 
 - **Etapas de la contribución:**
-- **Planeación:**
+- **1.Planeación:**
 Antes de hacer una contribución haga el ejercicio de plantear y formular de manera adecuada el cambio que va a realizar (actualizar, añadir o eliminar).
 
-- **Edición:**
-Debe tener en cuenta que por motivos de optimización y mantenimientó del software la edición del codigo para actualizar, añadir o eliminar debe realizarce de manera puntual afectando la menor cantidad de modulos y archivos (se solicita una solucion espe)
-**Reglas:**
-- **1. Sintaxis:**
-   
+- **2.Edición:**
+Debe tener en cuenta que por motivos de optimización y mantenimientó del software la edición del codigo para actualizar, añadir o eliminar debe realizarce de manera puntual afectando la menor cantidad de modulos y archivos (se espera *un* cambio que solucione *un* problema).
 
-Las contribuciones son bienvenidas. Por favor, abre un issue o envía un pull request con mejoras y correcciones.
+- **3.Pull Request:**
+Como se menciona en el apartado **"Edición"** se espera que las contribuciones den solución a *un* problema especifico, asi mismo el Pull Request debe contener *un* cambio a ser valorado, esto con el fin de tener una mejor estructura y una mejor lectura de historial.
+- **Sintaxis:**
+- **Encabezado:**
+```
+acción: mencione el proposito del pr.
+```
+- **Descripción:**
+En esta parte describa de manera detallada el cambio que hizo.
+
+- **Ejemplo:**
+- **Encabezado**
+```
+actualización: mejora en la logica de inicio de sesión
+```
+- **Descripción:**
+```
+La logica del inicio de sesión no sera vulnerable a inyecciones SQL debido a la importacion de la libreria *"nombre de la libreria"*
+```
+
+- **Nota:**
+De ser posible espere que un integrante del grupo acepte el pr, en dado caso de aceptar un pr que cause problemas en producción la persona que acepto ese pr asumira las consecuncias dando solución al problema generado.
 
 ## Licencia
 Este proyecto está bajo la licencia MIT.
