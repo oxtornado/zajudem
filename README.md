@@ -5,7 +5,7 @@ Senasec es un servicio de software desarrollado por la empresa Zajudem. Este sis
 ## Tecnologías utilizadas
 
 - **Frontend:** React + Vite (TypeScript)
-- **Backend:** FastAPI (Python)
+- **Backend:** FastAPI (Python), Django REST Framework
 - **Base de datos:** MySQL
 - **APIs:** API RESTful
 - **Hardware:** Arduino (C) con servomotor y otros componentes
@@ -44,6 +44,30 @@ pip install -r requirements.txt
 
 # Iniciar el servidor FastAPI
 uvicorn main:app --reload
+```
+
+### Instalación del backend (DRF)
+```sh
+# Crear proyecto
+django-admin startproject example
+
+# Crear entorno virtual
+python -m venv venv
+source venv/bin/activate  # En Windows usar venv\Scripts\activate
+
+# Instalar dependencias
+pip install django
+pip install djangorestframework
+pip install psycopg2
+
+# Aplicar las migraciones y correr el servidor
+cd example
+
+python manage.py makemigrations
+
+python manage.py migrate
+
+python manage.py runserver
 ```
 
 ### Configuración de la base de datos
