@@ -80,20 +80,22 @@ Debe tener en cuenta que por motivos de optimización y mantenimientó del softw
 Como se menciona en el apartado **"Edición"** se espera que las contribuciones den solución a *un* problema especifico, asi mismo el Pull Request debe contener *un* cambio a ser valorado, esto con el fin de tener una mejor estructura y una mejor lectura de historial.
 - **Sintaxis:**
 - **Encabezado:**
-```
+```sh
 acción: mencione el proposito del pr.
 ```
 - **Descripción:**
-En esta parte describa de manera detallada el cambio que hizo.
+```sh
+En esta parte describa de manera detallada el cambio que hizo y describa los modulos y archivos afectados.
+```
 
 - **Ejemplo:**
 - **Encabezado**
-```
+```sh
 actualización: mejora en la logica de inicio de sesión
 ```
 - **Descripción:**
-```
-La logica del inicio de sesión no sera vulnerable a inyecciones SQL debido a la importacion de la libreria "nombre de la libreria"
+```sh
+La logica del inicio de sesión no sera vulnerable a inyecciones SQL debido a la importacion de la libreria "nombre de la libreria" en la direccion /user/login/login.php
 ```
 
 - **Nota:**
