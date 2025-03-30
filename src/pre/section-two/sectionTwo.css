@@ -1,7 +1,7 @@
 .sectionTwo {
     display: grid;
     place-items: center;
-    margin: 100px;
+    margin: -100px 0 60px 0;
 }
 .digitalSecurity span {
     color: #07D600 ;

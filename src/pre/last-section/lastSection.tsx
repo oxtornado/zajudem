@@ -1,5 +1,5 @@
 import './lastSection.css'
-import Button from './button'
+import Button from '../button/button'
 
 function lastSection() {
     return (
