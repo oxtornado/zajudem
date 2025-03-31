@@ -1,11 +1,10 @@
 import Button from './button';
-
+import "../styles.css";
 const Header = () => {
   return (
     <div className="header">
-      <a href="/" className='font-bold'>Quienes somos</a>
+      <a href="/" className=''>Quienes somos</a>
       <a href="/">Servicio</a>
-      <p className='font-bold'></p>
       <Button />
     </div>
   );
