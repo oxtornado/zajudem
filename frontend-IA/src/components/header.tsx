@@ -11,7 +11,7 @@ const Header = () => {
   }, []);
 
   return (
-      <div className="flex justify-evenly">
+      <div className="pt-2 flex justify-evenly">
         <a href="/">Quienes somos</a>
         <a href="/">Servicio</a>
         <Button />

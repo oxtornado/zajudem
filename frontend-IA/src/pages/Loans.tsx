@@ -1,4 +1,3 @@
-import React from 'react';
 import { Calendar as CalendarIcon, Clock, User, Package } from 'lucide-react';
 
 const Loans = () => {

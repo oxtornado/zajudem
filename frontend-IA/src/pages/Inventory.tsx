@@ -1,4 +1,3 @@
-import React from 'react';
 import { Search, Plus, Edit2, Trash2 } from 'lucide-react';
 
 const Inventory = () => {
