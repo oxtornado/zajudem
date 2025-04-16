@@ -1,18 +1,18 @@
 import { Search, Edit2, Trash2 } from 'lucide-react';
 
-const Inventory = () => {
+const Classroom = () => {
   const inventoryItems = [
-    { id: 1, name: 'Proyector', status: 'Disponible', location: 'Aula 101' },
-    { id: 2, name: 'Laptop', status: 'En uso', location: 'Aula 203' },
-    { id: 3, name: 'Cámara web', status: 'Mantenimiento', location: 'Almacén' },
-  ];
+    { id: 1, name: 'Sistemas 1', status: 'Disponible', location: 'Biblioteca' },
+    { id: 2, name: 'Sistemas 2', status: 'En uso', location: 'Biblioteca' },
+    { id: 3, name: 'C1', status: 'Mantenimiento', location: 'Bloque C' },
+  ]; 
 
   return (
     <div className="space-y-6">
       <div className="sm:flex sm:items-center sm:justify-between">
-        <h2 className="text-2xl font-bold text-gray-900">Inventario</h2>
+        <h2 className="text-2xl font-bold text-gray-900">Aulas</h2>
         <button className="mt-4 sm:mt-0 inline-flex items-center px-4 py-2 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-green-600 hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-500">
-          Agregar elemento
+          Agregar
         </button>
       </div>
 
@@ -94,4 +94,4 @@ const Inventory = () => {
   );
 };
 
-export default Inventory;
+export default Classroom;
