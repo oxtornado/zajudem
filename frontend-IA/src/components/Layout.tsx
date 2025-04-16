@@ -1,13 +1,13 @@
 import { Outlet, Link, useLocation } from 'react-router-dom';
-import { Package, Calendar } from 'lucide-react';
+import { Home, Calendar } from 'lucide-react';
 import clsx from 'clsx';
 
 const Layout = () => {
   const location = useLocation();
 
   const navigation = [
-    { name: 'Inventario', href: '/inventory', icon: Package },
-    { name: 'Préstamos', href: '/loans', icon: Calendar },
+    { name: 'Aulas', href: '/classroom', icon: Home },
+    { name: 'Calendario', href: '/calendar', icon: Calendar },
   ];
 
   return (

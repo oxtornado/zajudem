@@ -1,8 +1,8 @@
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 import Login from './pages/Login';
 import Register from './pages/Register';
-import Inventory from './pages/Inventory';
-import Loans from './pages/Loans';
+import Classroom from './pages/Classroom';
+import Calendar from './pages/Calendar';
 import Layout from './components/Layout';
 import Hero from './pages/Hero';
 
@@ -14,8 +14,8 @@ function App() {
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
         <Route element={<Layout />}>
-          <Route path="/inventory" element={<Inventory />} />
-          <Route path="/loans" element={<Loans />} />
+          <Route path="/classroom" element={<Classroom />} />
+          <Route path="/calendar" element={<Calendar />} />
         </Route>
         <Route path="*" element={<Navigate to="/login" replace />} />
       </Routes>
