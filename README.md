@@ -130,4 +130,3 @@ Este proyecto está bajo la licencia MIT.
 
 ---
 Para más información, contacta a [Zajudem](mailto:dnielussa@gmail.com) o revisa la [documentación oficial del proyecto](#).
-
