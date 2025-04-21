@@ -7,51 +7,49 @@ const FaceCapture: React.FC = () => {
     const [capturing, setCapturing] = useState(false);
     const [status, setStatus] = useState(''); // muestra msj del proceso, fotos en backend, tomando fotos...
 
-    const captureMultiplePhotos = async () => {
-        setCapturing(true); // inicio de captura
-        setStatus('Capturando fotos...');
-
-        const photos: Blob[] = [];
-        // captura 5 fotos
-        for (let i = 0; i < 5; i++) {
-            const imageSrc = webcamRef.current?.getScreenshot();
-            if (imageSrc) {
-                const blob = await fetch(imageSrc).then((res) => res.blob());
-                photos.push(blob);
-            }
-            await new Promise((resolve) => setTimeout(resolve, 1000)); // 1 segundo
+    const captureAndVerify = async () => {
+        setCapturing(true);
+        setStatus('Capturando rostro...');
+    
+        const imageSrc = webcamRef.current?.getScreenshot();
+    
+        if (!imageSrc) {
+            setStatus('No se pudo capturar imagen');
+            setCapturing(false);
+            return;
         }
-
-        setStatus('Enviando al backend...');
-
+    
+        const blob = await fetch(imageSrc).then((res) => res.blob());
+    
+        setStatus('Enviando imagen para verificación...');
+    
         try {
             const formData = new FormData();
-            photos.forEach((photo, index) => {
-                formData.append('images', photo, `face_${index}.jpg`);
-            });
-
+            formData.append('file', blob, 'captura.jpg'); // debe llamarse "file" como espera FastAPI
+    
             const response = await axios.post(
-                'http://localhost:8000/register-face/',
+                'http://localhost:8000/verificar',
                 formData,
-                {
-                    headers: { 'Content-Type': 'multipart/form-data' },
-                }
+                { headers: { 'Content-Type': 'multipart/form-data' } }
             );
-
-            console.log('Respuesta del backend:', response.data);
-            setStatus('Captura y envío exitoso');
+    
+            if (response.data.acceso) {
+                setStatus('✅ Acceso permitido');
+            } else {
+                setStatus('⛔ Acceso denegado');
+            }
         } catch (error) {
-            console.error('Error enviando al backend:', error);
-            setStatus('Error al enviar imágenes');
+            console.error('Error en la verificación:', error);
+            setStatus('❌ Error al verificar rostro');
         }
-
-        setCapturing(false); // fin captura
+    
+        setCapturing(false);
     };
-
+    
     return (
         <div className="flex flex-col items-center space-y-4">
             <button
-                onClick={captureMultiplePhotos}
+                onClick={captureAndVerify}
                 disabled={capturing}
                 className="w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-green-600 hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
             >
