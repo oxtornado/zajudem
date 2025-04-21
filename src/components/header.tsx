@@ -11,18 +11,11 @@ const Header = () => {
   }, []);
 
   return (
-    <div
-      className={`
-        mt-3 transition-all duration-700 ease-in-out
-        ${isLoading ? 'blur-md opacity-60 pointer-events-none' : 'blur-0 opacity-100'}
-      `}
-    >
-      <div className="flex justify-evenly">
+      <div className="pt-2 flex justify-evenly">
         <a href="/">Quienes somos</a>
         <a href="/">Servicio</a>
         <Button />
       </div>
-    </div>
   );
 };
 
