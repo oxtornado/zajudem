@@ -68,6 +68,15 @@ python manage.py makemigrations
 python manage.py migrate
 
 python manage.py runserver
+
+#Ingresar a la libreria backend
+cd senasec-backend/
+
+#Instalar librerias
+pip install fastapi uvicorn deepface python-multipart
+
+uvicorn main:app --reload
+
 ```
 
 ### Configuración de la base de datos
