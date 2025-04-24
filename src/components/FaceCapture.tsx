@@ -2,7 +2,11 @@ import React, { useRef, useState } from 'react';
 import Webcam from 'react-webcam'; // libreria para usar la camara
 import axios from 'axios'; // conectar contenido con el backend
 
-const FaceCapture: React.FC = () => {
+type FaceCaptureProps = {
+    id: string;
+  };
+
+  const FaceCapture: React.FC<FaceCaptureProps> = ({ id }) => {
     const webcamRef = useRef<Webcam>(null); // referencia para tomar capturas
     const [capturing, setCapturing] = useState(false);
     const [status, setStatus] = useState(''); // muestra msj del proceso, fotos en backend, tomando fotos...
@@ -25,10 +29,11 @@ const FaceCapture: React.FC = () => {
     
         try {
             const formData = new FormData();
-            formData.append('file', blob, 'captura.jpg'); // debe llamarse "file" como espera FastAPI
+            formData.append('document_id', id); 
+            formData.append('images', blob, 'captura_temp.jpg'); // ✅ esto sí lo espera tu backend
     
             const response = await axios.post(
-                'http://localhost:8000/verificar',
+                'http://localhost:8000/register-face/', // URL de tu API FastAPI
                 formData,
                 { headers: { 'Content-Type': 'multipart/form-data' } }
             );
