@@ -6,84 +6,79 @@ Senasec es un servicio de software desarrollado por la empresa Zajudem. Este sis
 
 - **Frontend:** React + Vite (TypeScript)
 - **Backend:** FastAPI (Python), Django REST Framework
-- **Base de datos:** MySQL
+- **Base de datos:** PostgreSQL
 - **APIs:** API RESTful
 - **Hardware:** Arduino (C) con servomotor y otros componentes
 
-## Instalación
+## 🔧 Requisitos
 
-### Requisitos previos
-- Node.js y npm instalados
-- Python y pip instalados
-- MySQL configurado
-- Arduino IDE si se desea probar la integración con hardware
+- Python 3.10 o superior
+- Node.js 18 o superior
+- npm (viene con Node.js)
 
-### Instalación del frontend
-```sh
-# Clonar el repositorio
-git clone https://github.com/tu_usuario/senasec.git
-cd senasec/frontend
+---
 
-# Instalar dependencias
-npm install
+## ⚙️ Instalación
 
-# Iniciar el servidor de desarrollo
-npm run dev
-```
+### 📦 Backend (FastAPI)
 
-### Instalación del backend
-```sh
-cd ../backend
+1. Abrí una terminal y navegá al directorio del backend:
 
-# Crear entorno virtual
-python -m venv venv
-source venv/bin/activate  # En Windows usar venv\Scripts\activate
+    ```bash
+    cd backend-IA
+    ```
 
-# Instalar dependencias
-pip install -r requirements.txt
+2. (Opcional pero recomendado) Creá y activá un entorno virtual:
 
-# Iniciar el servidor FastAPI
-uvicorn main:app --reload
-```
+    - En Linux/macOS:
 
-### Instalación del backend (DRF)
-```sh
-# Crear proyecto
-django-admin startproject example
+        ```bash
+        python -m venv venv
+        source venv/bin/activate
+        ```
 
-# Crear entorno virtual
-python -m venv venv
-source venv/bin/activate  # En Windows usar venv\Scripts\activate
+    - En Windows:
 
-# Instalar dependencias
-pip install django
-pip install djangorestframework
-pip install psycopg2
+        ```bash
+        python -m venv venv
+        venv\Scripts\activate
+        ```
 
-# Aplicar las migraciones y correr el servidor
-cd example
+3. Instalá las dependencias:
 
-python manage.py makemigrations
+    ```bash
+    pip install -r requirements.txt
+    ```
 
-python manage.py migrate
+4. Ejecutá el servidor (si usás `main.py` como entrada):
 
-python manage.py runserver
+    ```bash
+    uvicorn main:app --reload
+    ```
 
-#Ingresar a la libreria backend
-cd senasec-backend/
+---
 
-#Instalar librerias
-pip install fastapi uvicorn deepface python-multipart
+### 💻 Frontend (React)
 
-uvicorn main:app --reload
+1. Abrí otra terminal y navegá al directorio del frontend:
 
-```
+    ```bash
+    cd frontend-IA
+    ```
 
-### Configuración de la base de datos
-1. Crear una base de datos en MySQL con el nombre `senasec`.
-2. Configurar las credenciales de conexión en el archivo `.env` del backend.
-3. Ejecutar las migraciones necesarias (si aplica).
+2. Instalá las dependencias:
 
+    ```bash
+    npm install
+    ```
+
+3. Iniciá la app en modo desarrollo:
+
+    ```bash
+    npm run dev
+    ```
+
+---
 ### Instalación en Arduino
 1. Conectar el Arduino y abrir el IDE de Arduino.
 2. Subir el código en lenguaje C proporcionado en el directorio `arduino/`.
